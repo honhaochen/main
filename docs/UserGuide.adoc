@@ -32,13 +32,6 @@ Welcome to _TravEzy_! 😊
 Firstly, thank you for downloading our application. We greatly appreciate your support and
 we *promise* to make travel easy with _TravEzy_.
 
-So, is _TravEzy_ for you?
-
-. Are you a busy university student with a passion for travelling?
-. Are your summers and winters swamped with internships, projects and CCA activities?
-. Do your numerous commitments get in the way of your travel plans?
-
-IF you answered yes to the questions above, then *yes* it is. If not, it still is :)
 
 What is _TravEzy_?
 
@@ -46,15 +39,27 @@ _TravEzy_ is a desktop application with a command line interface (CLI) and is *p
 
 TravEzy is perfect for:
 
-. Managing your busy calendar and finding the a good time to take that much needed holiday!
+* Managing your busy calendar and finding the best time to take that much needed holiday!
 
-. Creating the ideal itinerary for your trips :)
+* Crafting the ideal itinerary for your trip :)
 
-. Tracking your expenses during your trip, so that you have enough money left for the trip home
+* Tracking your expenses during your trip, so that you have enough money left for the trip home
 
-. Journaling in your travel diary and effortlessly looking at old entries to recall your favourite moments
+* Journaling and looking at fond old memories in your diary
 
-. Keep in contact with your old and new friends with the help of _TravEzy's_ address book
+* Keeping in contact with your old and new friends with the help of _TravEzy's_ address book
+
+
+
+So, is _TravEzy_ for you?
+
+* Are you a busy university student with a passion for travelling?
+* Are your summers and winters swamped with internships, projects and CCA activities?
+* Do your numerous commitments get in the way of your travel plans?
+
+IF you answered yes to the questions above, then *yes* it is. If not, it still is :)
+
+
 
 
 What are you waiting for? Hop on to this user guide and we will
@@ -64,7 +69,7 @@ travel to +++<u>+++Section 2, “Quick Start”+++</u>+++ to start TravEzy 😊
 
 . Grab a cup of coffee.
 
-. Ensure that you have Java 11 or above installed in your Computer.
+. Ensure that you have Java 11 or above installed in your computer.
 
 . Download the latest
 https://github.com/AY1920S1-CS2103T-T17-2/main/releases[TravEzy.jar]
@@ -86,11 +91,15 @@ Refer to Section 3, “Features” for details of each command.
 
 == Preface
 
-Excited to start using _TravEzy_? Read this section to find out how this document is structured, and what each symbol and special font style mean. We promise that this will help you to get started with using _TravEzy_ more quickly! 😊
+Excited to start using _TravEzy_?
+Read this section to find out how this document is structured,
+and what all the symbols and special fonts mean.
+We promise that this will help you to get started with _TravEzy_ more quickly! 😊
 
 === Structure of this Document
 
-There are *alot* of things that TravEzy can do. So, we have organised this document such that you can easily look for what *you* need.
+There are *alot* of things that TravEzy can do.
+So, we have organised this document such that you can easily look for what *you* need.
 
 
 We've split up this guide into the different features of our application, namely:
@@ -102,11 +111,19 @@ We've split up this guide into the different features of our application, namely
 * Diary
 * Achievements
 
-In each of the above sections, you will be introduced to the *interface* of the feature and the *commands* that will do the menial tasks for you.
+In each of the above sections, you will be introduced to the *Interface* of the feature and the *Commands* that will
+help you make travel easy.
+
+NOTE: *Interface* refers to how _TravEzy_ will be presented to you and how you can interact with _TravEzy_.
+In this guide, we have included images of *exactly* what you should see in _TravEzy_ at every step, so don't worry! 😊
+
+NOTE: *Commands* refers to what you wil be typing into _TravEzy_ to start making travel easy. Again, there are plenty of
+images to ensure clarity. 😊
+
 
 === Reading this Document
 
-Symbols and fanciful (okay, different) fonts are exciting, aren't they? Let's find out more about what they mean in this document!
+Symbols and exquisite (okay, different) fonts are exciting, aren't they? Let's find out more about what they mean in this document!
 
 .Symbols and fonts
 [grid="rows", frame="none"]
@@ -146,7 +163,7 @@ Main is the welcome screen for _TravEzy_. From here, you can easily navigate to 
 
 This is how _TravEzy's main_ page looks like:
 
-image::mainInterface.png[Main interface,width=800]
+image::MainInterface.png[Main interface,width=800]
 
 === Going to another page: ``goto``
 
@@ -166,11 +183,11 @@ where ``PAGE TYPE`` can be any of the following: ``calendar``, ``itinerary``, ``
 
 Step 1. Type ``goto itinerary`` in the _command box_ and press _Enter_. +
 
-image::mainGoto1.png[Goto command]
+image::MainGoto1.png[Goto command,width=600]
 
 Step 2. You will be directed to the _itinerary page_.
 
-image::mainGoto2.png[Goto result]
+image::MainGoto2.png[Goto result,width=600]
 
 
 === Viewing help: ``help``
@@ -184,13 +201,13 @@ If you are lost, this command will be helpful.
 
 Step 1. Type ``help`` in the _command box_ and press _Enter_. +
 
-image::mainHelp1.png[Help command]
+image::MainHelp1.png[Help command,width=600]
 
 Step 2. The message in the _result box_ will be updated to indicate that the help window has been opened.
 
 Step 3. The help window will appear as a pop-up and you may click the "copy link". This link will direct you to _TravEzy's_ user guide (i.e. this document).😊 +
 
-image::mainHelp2.png[Help result]
+image::MainHelp2.png[Help result,width=600]
 
 === Exiting the application: ``exit``
 
@@ -203,12 +220,13 @@ It's time to catch your flight, exit  _TravEzy_ and start your trip!
 
 Step 1. Type ``exit`` in the _command box_ and press _Enter_. +
 
-image::exit1.png[Exit command]
+image::MainExit1.png[Exit command,width=600]
 
 Step 2. All _TravEzy's_ windows will close.
 
 WARNING: The above commands ``goto``, ``help`` and ``exit`` can also be executed from the other _pages_.
 
+//tag::calendar[]
 == Calendar
 
 It's the end of the semester but there are still orientation camps, internships, and family commitments to attend to. However, after a long and tiring semester, the desire to unwind by travelling is just *too strong*. Sounds like you?
@@ -440,6 +458,8 @@ Step 3. The _result box_ will display a message to indicate when you are able to
 
 image::calendarScreenshots/suggest2.png[Suggest result,width=600]
 
+//end::calendar[]
+
 == Itinerary
 
 Now that you have booked your flight, it's time to start planning your trip using _TravEzy's_ Itinerary.
@@ -465,28 +485,11 @@ This is how _TravEzy's_ Itinerary looks like:
 
 image::ItineraryInterface.png[width=800]
 
-=== Auto-completion feature
-
-Don't you wish there's a way to quickly type all your commands. Well _TravEzy's_ Itinerary got you covered! _TravEzy's_
-Itinerary _command box_ has auto-completion function which offers suggestions based on your input.
-
-This is how _TravEzy's_ Itinerary auto-complete looks like:
-
-image::ItineraryAuto.png[width=600]
-
-1. _Auto-complete dropdown bar_. Provides suggestions to complete your command base on your current input typed in the
-_command box_.
-
-[WARNING]
-The _auto-complete dropdown bar_ requires some time to sync with the input typed in the command box. Hence, give some time for
-it to read the input before hitting _Enter_
-
 === Adding an event: ``add``
 
 Planning to visit DisneySea tomorrow? Add some rides that you plan to take then! 🎢
 
-*Format:*
-
+*Format:* +
 ``add title/TITLE date/DATE time/TIME [l/LOCATION] [d/DESCRIPTION]``
 
 *Example:*
@@ -524,8 +527,7 @@ you can always remove it from the _event list_.
 
 Read on to find out more!
 
-*Format:*
-
+*Format:* +
 ``delete INDEX``
 
 *Example:*
@@ -550,8 +552,7 @@ image::ItineraryDelete2.png[width=600]
 
 Rather than deleting an event when you have a change of plans, why not edit the details of the event instead?
 
-*Format:*
-
+*Format:* +
 ``edit INDEX [title/TITLE] [date/DATE] [time/TIME] [l/LOCATION] [d/DESCRIPTION] [tag/]``
 
 [TIP]
@@ -583,8 +584,7 @@ image::ItineraryEdit2.png[width=600]
 Impressive! After you have completed an event that you have planned for the day, _TravEzy_ itinerary lets you check that
 event as done. ✅
 
-*Format:*
-
+*Format:* +
 ``done INDEX``
 
 *Example:*
@@ -610,13 +610,8 @@ image::ItineraryDone2.png[width=600]
 What if you want to see all your events in ONE, CONTINUOUS list? The Itinerary allows you to see everything in one,
 convenient list!
 
-*Format:*
-
+*Format:* +
 ``list``
-
-*Example:*
-
-    list
 
 *Step by step:*
 
@@ -645,13 +640,8 @@ How convenient is that! 😄
 The clear function removes *ALL* the events that you have planned in your _event list_. This action *CANNOT* be
 undone. Hence, only click on the *Proceed* button if you are sure that you want to clear your _event list_.
 
-*Format:*
-
+*Format:* +
 ``clear``
-
-*Example:*
-
-    clear
 
 *Step by step:*
 
@@ -676,13 +666,8 @@ image::ItineraryClear3.png[width=600]
 Start you day right by saying hello to _TravEzy_ Itinerary and it will greet you back with the current _time_ and _date_.
 _TravEzy_ will also filter the _event list_ to showcase events that are due today.
 
-*Format:*
-
+*Format:* +
 ``greet``
-
-*Example:*
-
-    greet
 
 *Step by step:*
 
@@ -704,13 +689,8 @@ your past commands for the Itinerary.
 
 Let's find out how!
 
-*Format:*
-
+*Format:* +
 ``history``
-
-*Example:*
-
-    history
 
 *Step by step:*
 
@@ -731,8 +711,7 @@ keywords. 😊
 [TIP]
 If your _event list_ is too cluttered up, try using the ``clear`` command instead to reset the *whole* _event list_ instead.
 
-*Format:*
-
+*Format:* +
 ``search SEARCH CONDITION``
 
 where ``SEARCH CONDITION`` can be any of the following: ``title/TITLE``, ``date/DATE``, ``time/TIME``, ``l/LOCATION``,
@@ -760,8 +739,7 @@ image::ItinerarySearch2.png[width=600]
 
 Organizing your events in the _event list_ has never been easier the Itinerary's awesome sorting capabilities. 💯
 
-Format:
-
+Format: +
 ``sort by/SORT CONDITION``
 
 where ``SORT CONDITION`` can be any of the following: ``title``, ``location``, ``chronological``, ``completion`` or
@@ -784,6 +762,24 @@ TravEzy has helped sorted out your life!"
 Step 3. The Itinerary will present the sorted _event list_ based on the sort condition given.
 
 image::ItinerarySort2.png[width=600]
+
+=== Auto-completion feature
+
+Don't you wish there's a way to quickly type all your commands. Well _TravEzy's_ Itinerary got you covered! _TravEzy's_
+Itinerary _command box_ has auto-completion function which offers suggestions based on your input.
+
+This is how _TravEzy's_ Itinerary auto-complete looks like:
+
+image::ItineraryAuto.png[width=600]
+
+1. _Auto-complete dropdown bar_. Provides suggestions to complete your command base on your current input typed in the
+_command box_.
+
+[WARNING]
+The _auto-complete dropdown bar_ requires some time to sync with the input typed in the command box. Hence, give some time for
+it to read the input before hitting _Enter_
+
+//tag::address[]
 
 == Address Book
 
@@ -853,14 +849,6 @@ See everyone in your address book with one command!
 *Format:* +
 `list`
 
-****
-*Examples:*
-
-* To list your contacts,
-
-    list
-****
-
 *Step by Step:*
 
 Step 1. Type `list` in the _command box_ and click _Enter_.
@@ -897,9 +885,9 @@ When editing tags, the existing tags of the person will be removed i.e adding of
  +
  You can remove the person's country by typing `c/` without specifying any country after it.
 
-****
+*Examples:*
 
-Examples:
+****
 
 * To edit a 1st person's phone number and email address to be `91234567` and `johndoe@example.com` respectively. +
 
@@ -947,7 +935,7 @@ Format: `find KEYWORD [MORE_KEYWORDS]`
 Persons matching at least one keyword will be returned (i.e. `OR` search). e.g. `Hans Bo` will return `Hans Gruber`,
 `Bo Yang`
 
-Examples:
+*Examples:*
 ****
 * To find `John`,
 
@@ -977,15 +965,17 @@ Make your address book neat and organized! Clear off any old and unused contact 
 application allows you to delete your old contact information. Time to make your address book look pretty and neat!
 
 *Format:* +
- `delete INDEX`
+`delete INDEX`
 
 [WARNING]
 The index refers to the index number shown in the displayed person list. +
  +
 The index *must be a positive integer* 1, 2, 3, ...
 
+
+*Examples:*
+
 ****
-Examples:
 
 * Delete the 2nd person in the address book. +
 
@@ -1039,8 +1029,10 @@ Address book data are saved in the hard disk automatically after any command tha
 
 There is no need to save manually.
 
+//end::address[]
+
 == Financial Tracker
-Scare that you're gonna overspend whenever you're on a trip? Afraid no more! TravEzy's Financial Tracker allow you to track your expenses seamlessly!
+Scare that you're gonna overspend whenever you're on a trip? Afraid no more! _TravEzy's_ _Financial Tracker_ allow you to track your expenses seamlessly!
 
 Each of your expense has 6 key fields:
 
@@ -1051,10 +1043,12 @@ Each of your expense has 6 key fields:
 . Type of expenditure
 . Country
 
-The Date and Time specify when you spend your expenses, followed by the amount, description, types of expenditure and country where you're current travelling at. Example of the types of expenditure are food, entertainment, health care, etc. You name it, TravEzy tracks it! In Financial Tracker, you will be able to manage your expenses easily.
+The Date and Time specify when you spend your expenses, followed by the amount, description, types of expenditure and country where you're current travelling at. Example of the types of expenditure are food, entertainment, health care, etc. You name it, _TravEzy_ tracks it! In _Financial Tracker_, you will be able to manage your expenses easily.
+
+WARNING: Valid year range is from 1000 to 3999.
 
 === Interface
-This is what you will see when navigated to the financial tracker:
+This is what you will see when navigated to the _Financial Tracker_:
 
 image::FinancialTrackerInterface.png[Financial Tracker interface,width=800]
 
@@ -1063,8 +1057,7 @@ Adding the expense of milk you've bought at the grocery shop you stopped by?
 
 WARNING: You can only add a total maximum amount of one trillion!
 
-*Format:*
-
+*Format:* +
 ``add a/AMOUNT d/DESCRIPTION t/TYPE OF EXPENDITURE [date/DATE] [time/TIME]``
 
 *Example:*
@@ -1073,21 +1066,22 @@ WARNING: You can only add a total maximum amount of one trillion!
 
 *Step by step:*
 
-Step 1.  Type ``add a/2.89 d/Meiji Milk t/grocery`` in the _Command box_ and press _Enter_.
+Step 1. Select which country you're currently at from the _Countries dropdown box_.
+
+Step 2. Type ``add a/2.89 d/Meiji Milk t/grocery`` in the _Command box_ and press _Enter_.
 
 image::FinancialTrackerAdd1.png[width=600]
 
-Step 2. The _Result box_ will display the message "Expense added".
+Step 3. The _Result box_ will display the message "Expense added".
 
-Step 3. Now you can find your added expense in the _Expense list panel_.
+Step 4. Now you can find your added expense in the _Expense list panel_.
 
 image::FinancialTrackerAdd2.png[width=600]
 
 === Deleting an expense: ``delete``
 Added a wrong expense? Of course you can delete it if you want to :)
 
-*Format:*
-
+*Format:* +
 ``delete INDEX``
 
 *Example:* Delete the first expense you saw on your expense list.
@@ -1107,8 +1101,7 @@ image::FinancialTrackerDelete2.png[width=600]
 === Editing an expense: ``edit``
 Add a wrong expense? Why not edit it instead!
 
-*Format:*
-
+*Format:* +
 ``edit INDEX [a/AMOUNT] [d/DESCRIPTION] [t/TYPE OF EXPENDITURE] [date/DATE] [time/TIME]``
 
 *Example:* Edit the 1st expense you saw on your expense list.
@@ -1132,13 +1125,8 @@ image::FinancialTrackerEdit2.png[width=600]
 === Clears an expense list: ``clear``
 Messed up your expense list? Don't worry, just clear it!
 
-*Format:*
-
+*Format:* +
 ``clear``
-
-*Example:* Clears your current country's expense list.
-
- clear
 
 *Step by step:*
 
@@ -1157,13 +1145,8 @@ Did something wrong? We heard you! Simply undo your previous action :)
 
 WARNING: You can only undo your previous `add`, `edit`, `delete` and `clear` command.
 
-*Format:*
-
+*Format:* +
 ``undo``
-
-*Example:* Undo your previous `clear` command.
-
- undo
 
 *Step by step:* (A continue from above `clear` command)
 
@@ -1181,11 +1164,10 @@ image::FinancialTrackerUndo2.png[width=600]
 === Switching between countries: ``switch``
 Currently in somewhere else? Switch to that expense list instead!
 
-*Format:*
-
+*Format:* +
 `switch COUNTRY`
 
-TIP: Do realise that you can always use the drop down menu instead!
+TIP: You can always use the _Countries dropdown box_ directly instead!
 
 WARNING: You can only type in countries which are only listed from the _Countries dropdown box_
 
@@ -1210,8 +1192,7 @@ The default sorting way of the expense list is not your thing? Just sort your ex
 
 TIP: All of the sorting is done in reversed order :)
 
-*Format:*
-
+*Format:* +
 ``sort CRITERIA``
 
 Where ``CRITERIA`` can be ``amount``, ``date``, ``time``, ``type`` and ``default``
@@ -1237,13 +1218,8 @@ image::FinancialTrackerSort2.png[width=600]
 === Generate an overview of your spending: ``summary``
 Do you ever have difficulty summarising your spending? Afraid not! You can view you expenses statistics easily!
 
-*Format:*
-
+*Format:* +
 `summary`
-
-*Example:*
-
- summary
 
 *Step by step:*
 
@@ -1261,40 +1237,69 @@ image::FinancialTrackerSummary2.png[width=600]
 == Diary
 
 The sweetest part of any holiday is looking back at your fond memories. TravEzy's
-Diary allows you to do just that! Here is our Diary!
+_Diary_ allows you to do just that! Here is our _Diary_ right below!
+
 
 image::DiaryInterface.png[width=800]
 
 
+
+
 In TravEzy, we have broken down your memories into 4 key parts, namely _Title_, _Date and Time_, _Place_ and _Memory_.
 
-For example, here is a Diary Entry about our trip to Tioman
+For example, here is a _Diary Entry_ about our trip to Tioman
 
 . _Title_ -> First time Snorkeling
 . _Date and Time_  -> 30/12/2019 0900
 . _Place_ -> Tioman Island
-. _Memory_ -> Saw so may beautiful fish!
+. _Memory_ -> Saw so many beautiful fish!
 
-In the Diary, you will be able to add, delete, list and show your entries. There are also a few more special tasks that you can do with your diary.
+
+
+
+In the _Diary_, you will be able to add and delete your _Diary Entries_. There are also a few more *special* tasks that you can do with your _Diary_.
 Enjoy!
 
 
 === Adding diary entries to your diary ``add``
 
-Trying to journal about your fishing trip? The Diary allows you to add entries and keep them alive in your desktop forever.
+Trying to journal about your fishing trip? The _Diary_ allows you to add _Diary Entries_ and keep them alive in your desktop forever.
 
-Format: `add t/TITLE d/DATE TIME [p/PLACE] [m/MEMORY]`
+*Format:* +
+`add t/TITLE d/DATE TIME [p/PLACE] [m/MEMORY]`
 
 
-Example: Lets take the example of our midnight fishing trip!
+TIP: Keep your input for _Title_, _Place_ and _Memory_ short! No more than 50 characters for _title_ and 100 for _place_ and _memory_! This will help you
+keep your _Diary Entries_ short and sweet!
 
-Step 1: Enter ``add t/Fishing Trip d/12/12/2019 2300 p/Pulau Tekong m/Caught the biggest fish ever!``
+
+
+*Example:*
+
+
+    add t/Fishing Trip d/12/12/2019 2300 p/Pulau Tekong m/Caught the biggest fish ever!
+
+TIP: Note that _Date_ is input in this format:
+dd/mm/yyyy HHMM:
+| d = day | m = month | y = year | H = Hour (24HR) | M = Minute |
+
+
+
+WARNING: We know you're a young student, so we've kept the range for the year in _Date_ limited to 1980 - 2030
+
+
+*Step by step:*
+
+Lets take the example of a midnight fishing trip!
+
+Step 1: Type ``add t/Fishing Trip d/12/12/2019 2300 p/Pulau Tekong m/Caught the biggest fish ever!`` into the _User Input Box_ and
+press _Enter_ on your keyboard. You can refer to the picture below, where the number *1* is.
 
 image::DiaryAddBefore.png[width=600]
 
-Step 2: TravEzy will tell you if your `add` command was successful in the _Result Display_
+Step 2: TravEzy will tell you if your `add` command was successful in the _Result Display_, as can be seen where the number *2* is, in the picture below.
 
-Step 3: You can see you added entry in the _Diary List_
+Step 3: You can see your added entry in the _Diary List Panel_, similar to number *3* in the picture below.
 
 
 image::DiaryAddAfter.png[width=600]
@@ -1303,21 +1308,33 @@ image::DiaryAddAfter.png[width=600]
 
 === Deleting diary entries from your diary ``delete``
 
-For some memories, it's best to forget them ☹. The Diary can help you to get rid of unpleasant diary entries.
+It's best to forget some memories ☹. The _Diary_ can help you to get rid of unpleasant _Diary Entries_.
 
-Format: ``delete INDEX``
+*Format:* +
+``delete INDEX``
 
-Example: I lost my wallet at the amusement park in Genting, I don't want to remember
-that trip ever again :(
+*Example:*
 
-Step 1: Enter ``delete 2``
+    delete 2
+
+TIP: Can't delete what's not there! Try to keep the ``INDEX`` larger than 0 and smaller than the number of _Diary Entries_ in your list!
+
+*Step by step:*
+
+
+Let's say you lose your wallet while on holiday in Genting, That's definitely a trip that no one would want to remember :(.
+
+
+Step 1: Type ``delete 2`` into the _User Input Box_ and press _Enter_ on the keyboard.You can refer to the picture below, where the number *1* is.
+
+
 
 
 image::DiaryDeleteBefore.png[width=600]
 
-Step 2: TravEzy will tell you if your `delete` command was successful in the _Result Display_
+Step 2: TravEzy will tell you if your `delete` command was successful in the _Result Display_, as can be seen where the number *2* is, in the picture below.
 
-Step 3: You can see your updated _Diary List_ without the horrible memory
+Step 3: You can see your updated _Diary List Panel_ without the horrible memory, similar to number *3* in the picture below.
 
 
 image::DiaryDeleteAfter.png[width=600]
@@ -1327,20 +1344,27 @@ image::DiaryDeleteAfter.png[width=600]
 
 === List all your diary entries ``list``
 
-What if you want to see all your memories in _ONE_, _CONTINUOUS_ list? The Diary allows you to see everything in on, convenient list!
+What if you want to see all your memories in _ONE_, _CONTINUOUS_ list? The _Diary_ can do that as well! It allows you to see everything in one, convenient list!
 
-Format: ``list``
+*Format:* +
+ ``list``
 
-Example: I want to relive *EVERYTHING*
+*Example:*
 
-Step 1: Enter ``list``
+    list
 
+
+*Step by step:*
+
+Lets relive *EVERYTHING!*
+
+Step 1: Type ``list`` into the _User Input Box_ and press _Enter_ on the keyboard. You can refer to the picture below, where the number *1* is.
 
 image::DiaryListBefore.png[width=600]
 
-Step 2: TravEzy will tell you if your `list` command was successful in the _Result Display_
+Step 2: TravEzy will tell you if your `list` command was successful in the _Result Display_, as can be seen where the number *2* is, in the picture below.
 
-Step 3: You can see all your entries in the _Diary List_
+Step 3: You can see all your _Diary Entries_ in the _Diary List Panel_, similar to number *3* in the picture below.
 
 
 image::DiaryListAfter.png[width=600]
@@ -1348,21 +1372,29 @@ image::DiaryListAfter.png[width=600]
 === Find diary entries ``find``
 
 "Hey, when did I go to Spain?" It can be hard to remember
-all the details of your trips. That's why, this Diary allows you to look through all your entries to find the ones you want!
+all the details of your trips. That's why, this _Diary_ lets you look through all your entries quickly, to give you the entry that *you* want!
 
-Format: ``find TARGET``
+*Format:* +
+``find TARGET``
 
-Example: I want to see what I wrote about the Rugby World Cup
+*Example:*
 
+    find rugby
 
-Step 1: Enter ``find rugby``
+TIP: To search for _Dates_, enter them in the same format as before, when you added the _Diary Entry_ (dd/mm/yyyy HHMM)
+
+*Step by step:*
+
+That was the craziest Rugby World Cup ever! Who lost?
+
+Step 1: Type ``find rugby`` into the _User Input Box_ and press _Enter_ on the keyboard. You can refer to the picture below, where the number *1* is.
 
 
 image::DiaryFindBefore.png[width=600]
 
-Step 2: TravEzy will tell you if your `find` command was successful in the _Result Display_
+Step 2: TravEzy will tell you if your `find` command was successful in the _Result Display_, as can be seen where the number *2* is, in the picture below.
 
-Step 3: You can see the matching entries in your _Diary List_
+Step 3: You can see the matching _Diary Entries_ in your _Diary List Panel_, similar to number *3* in the picture below.
 
 
 
@@ -1372,23 +1404,31 @@ image::DiaryFindAfter.png[width=600]
 
 === Find specific diary entries ``findSpecific``
 
-Let's narrow down your search! The diary allows you to look through specific sections of each entry to find the exact entry that you want!
+Let's narrow down your search! The _Diary_ allows you to look through specific sections of each _Diary Entry_ to find the exact entry that you want!
 
 
-Format: ``findSpecific [t/TITLE] [d/DATE TIME] [p/PLACE] [m/MEMORY]``
+*Format:* +
+ ``findSpecific [t/TITLE] [d/DATE TIME] [p/PLACE] [m/MEMORY]``
 
-Example: I know that I had a trip on the 12th of December 2019, but I cant remember what I did...
-
-
-Step 1: Enter ``findSpecific d/12/12/2019``
+*Example:*
 
 
+    findSpecific d/12/12/2019
+
+
+*Step by step:*
+
+
+You know that you had a trip on the 12th of December 2019, but you can't remember what you did...
+
+
+Step 1: Type ``findSpecific d/12/12/2019`` into the _User Input Box_ and press _Enter_ on the keyboard. You can refer to the picture below, where the number *1* is.
 
 image::DiaryFindSpecificBefore.png[width=600]
 
-Step 2: TravEzy will tell you if your `findSpecific` command was successful in the _Result Display_
+Step 2: TravEzy will tell you if your `findSpecific` command was successful in the _Result Display_, as can be seen where the number *2* is, in the picture below.
 
-Step 3: You can see the specific matching entries in your _Diary List_
+Step 3: You can see the specific matching _Diary Entries_ in your _Diary List Panel_, similar to number *3* in the picture below.
 
 
 
@@ -1397,20 +1437,33 @@ image::DiaryFindSpecificAfter.png[width=600]
 
 === Private personal memories ``private``
 
-There are some personal memories which are for our eyes only. The Diary can help you to private memories from prying eyes.
+There are some personal memories which are for our eyes only. The _Diary_ can help you to private memories from prying eyes.
 
-Format: ``private INDEX``
+*Format:* +
+``private INDEX``
 
-Example: I had my first sip of wine today at the restaurant! I don't want my mum to find out...
+*Example:*
 
-Step 1: Enter ``private  4``
 
+    private 4
+
+
+
+TIP: Can't private what's not there! Try to keep the ``INDEX`` larger than 0 and smaller than the number of entries in your list!
+
+
+*Step by step:*
+
+You had your first sip of wine today! Better not let mum find out...
+
+
+Step 1: Type ``private 4`` into the _User Input Box_ and press _Enter_ on the keyboard. You can refer to the picture below, where the number *1* is.
 
 image::DiaryPrivateBefore.png[width=600]
 
-Step 2: TravEzy will tell you if your `private` command was successful in the _Result Display_
+Step 2: TravEzy will tell you if your `private` command was successful in the _Result Display_, as can be seen where the number *2* is, in the picture below.
 
-Step 3: You can see your updated _Diary List_, after the memory has been hidden
+Step 3: You can see your updated _Diary List_, after the memory has been hidden, similar to number *3* in the picture below.
 
 
 
@@ -1421,19 +1474,29 @@ image::DiaryPrivateAfter.png[width=600]
 
 Once you know you are alone and away from prying eyes, you can look at your private memories safely. The Diary can help you to unprivate those memories.
 
-Format: ``unprivate INDEX``
+*Format:* +
+``unprivate INDEX``
 
-Example: Ok!, I'm alone and I want to look at my private memories
-
-Step 1: Enter ``unprivate 4``
-
+*Example:*
 
 
+    unprivate 4
+
+Ok you're alone now! How was that wine? :)
+
+TIP: Can't unprivate what's not there! Try to keep the ``INDEX`` larger than 0 and smaller than the number of entries in your list!
+
+
+*Step by step:*
+
+
+Step 1: Type ``unprivate 4`` into the _User Input Box_ and press _Enter_ on the keyboard. You can refer to the picture below, where the number *1* is.
+=
 image::DiaryUnPrivateBefore.png[width=600]
 
-Step 2: TravEzy will tell you if your `unprivate` command was successful in the _Result Display_
+Step 2: TravEzy will tell you if your `unprivate` command was successful in the _Result Display_, as can be seen where the number *2* is, in the picture below.
 
-Step 3: You can see your updated _Diary List_, after the memory is visible again
+Step 3: You can see your updated _Diary List_, after the memory is visible again, similar to number *3* in the picture below.
 
 
 image::DiaryUnPrivateAfter.png[width=600]
@@ -1441,32 +1504,47 @@ image::DiaryUnPrivateAfter.png[width=600]
 
 === Keep your diary protected ``setDetails``
 
-You never know who may use your laptop when you're away. The Diary can help you to password protect your memories to stop hackers from looking at your private memories.
-If you ``setDetails``, you will not be able to use the ``unprivate`` command and will have to use the ``unlock`` command (See below)
+You never know who may use your laptop when you're away. The _Diary_ can help you to protect your memories to stop hackers from looking at your private memories with a _username_ and _password_.
+If you ``setDetails``, you will not be able to use the ``unprivate`` command and will have to use the ``unlock`` command (See below).
 
-Format: ``setDetails user/USERNAME password/PASSWORD``
+*Format:* +
+``setDetails user/USERNAME password/PASSWORD``
 
-Example: Better set a password to protect my memories against prying eyes
+*Example:*
 
-Step 1: Enter ``setDetails user/youcanthackme password/youreallycanthackme``
 
+    setDetails user/youcanthackme password/youreallycanthackme
+
+
+WARNING: You can only set your details once! After that, you will have to delete TravEzy if you forget your password and need to unlock entries. This is done to ensure *NO ONE* misues your personal information
+
+
+TIP: Keep your username and password long to keep those pesky hackers out! Minimally, make sure your username and password are alphanumeric and 8 characters long
+
+
+*Step by step:*
+
+
+Better set a password to protect your memories against prying eyes
+
+Step 1: Type ``setDetails user/youcanthackme password/youreallycanthackme`` into the _User Input Box_ and press _Enter_ on the keyboard. You can refer to the picture below, where the number *1* is.
 
 
 image::DiarySetDetailsBefore.png[width=600]
 
 
-Step 2: TravEzy will tell you if your `unprivate` command was successful in the _Result Display_
+Step 2: TravEzy will tell you if your `unprivate` command was successful in the _Result Display_, as can be seen where the number *2* is, in the picture below.
 
 
 
 image::DiarySetDetailsAfter.png[width=600]
 
 
-Step 1: Lets say someone tries to hack you
+. Lets say someone tries to hack you
 
 image::DiarySetDetailsHack.png[width=600]
 
-Step 1: TravEzy will protect you if someone else tries to change your details
+. TravEzy will protect you if someone else tries to change your details
 
 
 image::DiarySetDetailsHackFail.png[width=600]
@@ -1477,34 +1555,40 @@ image::DiarySetDetailsHackFail.png[width=600]
 
 With password protection, we want to ensure no one else can access our memories . The Diary can do this by ensuring only you can see the private memories.
 
-Format: ``unlock INDEX user/USERNAME password/PASSWORD``
+*Format:* +
+``unlock INDEX user/USERNAME password/PASSWORD``
 
-Example: Time to look at all my private memories
+*Example:*
 
-Step 1: Enter ``unlock 4 user/youcanthackme password/youreallycanthackme``
+    unlock 4 user/youcanthackme password/youreallycanthackme
+
+*Step by step:*
 
 
+Unlock your hidden memories!
+
+Step 1: Type ``unlock 4 user/youcanthackme password/youreallycanthackme`` into the _User Input Box_ and press _Enter_ on the keyboard. You can refer to the picture below, where the number *1* is.
 
 image::DiaryUnLockBefore.png[width=600]
 
 
-Step 2: TravEzy will tell you if your `unlock` command was successful in the _Result Display_
+Step 2: TravEzy will tell you if your `unlock` command was successful in the _Result Display_, as can be seen where the number *2* is, in the picture below.
 
 
 
 image::DiaryUnLockAfter.png[width=600]
 
 
-Step 1: Lets say someone tries to hack you
+. Lets say someone tries to hack you
 
 image::DiaryUnLockHackBefore.png[width=600]
 
-Step 1: TravEzy will protect you if someone else tries to change your details
+. TravEzy will protect you if someone else tries to change your details
 
 
 image::DiaryUnLockHackAfter.png[width=600]
 
-
+//tag::achievements[]
 
 == Achievements
 
@@ -1593,40 +1677,45 @@ image::AchievementsItinerary.png[width=800]
 If the number of entries in the itinerary has past the target goal of 200, the _progress bar_ will show 100% instead
 of the actual percentage.
 
+//end::achievements[]
+
 == FAQ
 
 *Q:* How do I backup my data onto cloud storage? +
 *A:* Locate the ``data`` folder in the same directory where you saved you jar file. Compact it into zip file before uploading it onto cloud storage.
 
 *Q:* How do I transfer my data onto another computer? +
-*A:* Backup your data first. Then, download TravEzy in the other computer and put your ``data`` folder on the same directory where you saved the jar file. Execute TravEzy and you should see your data has been safely transferred.
+*A:* Backup your data first. Then, download _TravEzy_ in the other computer and put your ``data`` folder on the same directory where you saved the jar file. Execute _TravEzy_ and you should see your data has been safely transferred.
 
 *Q:* Can I change the theme of the application? I prefer to work with a night theme interface. +
-*A:* Stay tuned for TravEzy v2.0 for this features! The TravEzy theme also aims to provide user with a UI that they are comfortable with. Hence, we strongly believe giving users the option to personalize their theme is extremely useful and would greatly consider adding it for the upcoming major update on TravEzy! Stay tuned for that!
+*A:* Stay tuned for _TravEzy_ v2.0 for this features! The _TravEzy_ theme also aims to provide user with a UI that they are comfortable with. Hence, we strongly believe giving users the option to personalize their theme is extremely useful and would greatly consider adding it for the upcoming major update on _TravEzy_! Stay tuned for that!
 
-*Q:* Who can view my travel posts in my TravEzy? +
-*A:* As TravEzy is a single user application, it is not opened to the public, and unable to be viewed by others. You can however, showcase your application in front of your friends to show off your overseas trips. +
+*Q:* Who can view my travel posts in my _TravEzy_? +
+*A:* As _TravEzy_ is a single user application, it is not opened to the public, and unable to be viewed by others. You can however, showcase your application in front of your friends to show off your overseas trips. +
 
 *Q:* Is it possible to connect to social media such as Facebook, Snapchat, Instagram? +
-*A:* Currently, it is not possible to connect to social media using TravEzy. However, we will consider implementing this feature in the future! Stay tuned for that! 😉
+*A:* Currently, it is not possible to connect to social media using _TravEzy_. However, we will consider implementing this feature in the future! Stay tuned for that! 😉
 
 *Q:* Is there any in-app purchase for this application? +
-*A:* NO there isn’t. _TravEzy_ is created from a non-profit organization and we are not here to milk any of your gold coins! It is absolutely free! It cost nothing, zilch, nada, 零, nil, kosong. So what are you waiting for get?  Get TravEzy today!
+*A:* NO there isn’t. _TravEzy_ is created from a non-profit organization and we are not here to milk any of your gold coins! It is absolutely free! It cost nothing, zilch, nada, 零, nil, kosong. So what are you waiting for get?  Get _TravEzy_ today!
 
 *Q:* I’m having difficulties uploading the pictures onto the travel diary. +
 *A:* At the moment, _TravEzy_ does not have any feature where it allows the user to store their travel photos. However, this will definitely be implemented in v2.0. We intend for the pictures to be stored in the user's local drive and subsequently in a cloud database which is stored online.
 
 *Q:* Who can I contact should there be a bug or feedback that I would like to share? +
-*A:* Feel free to send an email to the developer team: mailto:thetravellerdiary@gmail.com[thetravellerdiary@gmail.com] and we will access to your queries within three working days. We also value your feedback and will use it to improve TravEzy. Thank you and we looking forward to serving you better!
+*A:* Feel free to send an email to the developer team: mailto:thetravellerdiary@gmail.com[thetravellerdiary@gmail.com] and we will access to your queries within three working days. We also value your feedback and will use it to improve _TravEzy_. Thank you and we looking forward to serving you better!
 
-*Q:* Is it advisable to edit the storage files in _TravEzy_ so that the changes will be reflected when I start the application? +
+*Q:* Is it advisable to edit the storage files in _TravEzy_ so that the changes will also be reflected when I start the application? +
 *A:* _TravEzy_ gives you a caveat and strongly advise against tempering with the storage files in _TravEzy_ as this could result in falsification of the data.
 
-*Q:* Why are there data which I did not included when I first startup _TravEzy_?
+*Q:* Why are there data which I did not included when I first startup _TravEzy_? +
 *A:* Being a new user, _TravEzy_ will provide you with some sample data to experiment first before you start using _TravEzy_ proper. Hope that you will enjoy using _TravEzy_.
 
-*Q:* What are some of the cool features that are available in TravEzy currently? +
-*A:* TravEzy currently boast a plethora of features such as calendar, itinerary, address book, travelling diary, financial tracker and achievements page. All these features work in tandem with each other to give you the best and only the best travelling experience. Not only that, the TravEzy team also decided to spice things up and included some easter eggs scattered throughout the
+*Q:* I'm seemed to be having a bug whereby when given multiple similar prefixes, _TravEzy_ will still accept the input but only takes in the second prefix argument. Is this suppose to work as expected? +
+*A:* Yes, _TravEzy_ allows users to implement multiple similar prefixes for some commands so it reduce the trouble to delete the previous prefix argument in order to add in a new one.
+
+*Q:* What are some of the cool features that are available in _TravEzy_ currently? +
+*A:* _TravEzy_ currently boast a plethora of features such as calendar, itinerary, address book, travelling diary, financial tracker and achievements page. All these features work in tandem with each other to give you the best and only the best travelling experience. Not only that, the _TravEzy_ team also decided to spice things up and included some easter eggs scattered throughout the
 application for users to discuss and discover. Hope that you have fun finding these cool easter egg features! 🐰🐰🐰
 
 == Command Summary
@@ -1801,47 +1890,38 @@ Here are summary lists of commands for the different features.
 
 |``add``
 |Add a diary entry to the diary
-|``add t/title d/date [p/place] [m/memory]``
+|``add t/TITLE d/DATE [p/PLACE] [m/MEMORY]``
 
 |``delete``
 |Delete a certain entry from the diary
-|``delete index``
+|``delete INDEX``
+
+|``list``
+|Show all entries
+|``list``
+
+|``find``
+|Find entries which match your input
+|``find TARGET``
+
+|``findSpecific``
+|Find entries which match your input, according to the prefix
+|``findSpecific [t/TITLE] [d/DATE] [p/PLACE] [m/MEMORY]``
+
+|``private``
+|Private a certain entry
+|``private INDEX``
+
+|``unprivate``
+|UnPrivate a certain entry
+|``unprivate INDEX``
+
+|``setDetails``
+|Set your details to protect your entries
+|``setDetails user/USERNAME password/PASSWORD``
+
+|``unlock``
+|unlock a hidden memory
+|``unlock INDEX user/USERNAME password/PASSWORD``
 
 |===
-
-
-=== TRIVAGO (Coming in V2.0)
-``addData``     : add a new data to be used for price comparison +
-
-``showData``    : show the prices for a selected data +
-
-``deleteData``  : delete data used for price comparison +
-
-``compareData`` : compare prices between two data +
-
-``reviewData``  : review the previous few comparisons that user did +
-
-``listData``    : list out all the data that user has inputted into TTD
-
-Travel Recommendations: +
-``setDates``    : set the dates for your proposed trip +
-
-``setPrice``    : set your price range +
-
-``setType``     : set the type of trip (Fun, educational etc) +
-
-``generate``    : generate recommendations from stored diaries
-
-NUS trips: +
-``loadTrips``   : download trips from NUS societies +
-
-``deleteTrips`` : delete certain NUS trips +
-
-``showTrip``    : show your whole trip in a calendar view +
-
-``getSoc``      : get societies from NUS which organise trips +
-
-``deleteSoc``   : delete certain societies +
-
-``selectSoc``   : select a certain society to load trips
-

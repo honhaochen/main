@@ -3,16 +3,16 @@ package seedu.address.calendar.model.date;
 import static java.util.Objects.requireNonNull;
 import static seedu.address.commons.util.AppUtil.checkArgument;
 
-import seedu.address.calendar.model.util.DateUtil;
-import seedu.address.calendar.model.util.IntervalPart;
-import seedu.address.commons.exceptions.IllegalValueException;
-
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import seedu.address.calendar.model.util.DateUtil;
+import seedu.address.calendar.model.util.IntervalPart;
+import seedu.address.commons.exceptions.IllegalValueException;
 
 /**
  * Represents a date with specified day, month and year.
@@ -22,9 +22,9 @@ import java.util.regex.Pattern;
 public class Date implements IntervalPart<Date> {
     private static final String DAY_OF_WEEK_KEY = "dayOfWeek";
     private static final String DAY_OF_MONTH_KEY = "dayOfMonth";
-    private static final String MONTH_KEY= "month";
+    private static final String MONTH_KEY = "month";
     private static final String YEAR_KEY = "year";
-    private static final String DATE_PATTERN= "(?<" + DAY_OF_WEEK_KEY + ">\\S{3})\\,\\s(?<" + DAY_OF_MONTH_KEY + ">"
+    private static final String DATE_PATTERN = "(?<" + DAY_OF_WEEK_KEY + ">\\S{3})\\,\\s(?<" + DAY_OF_MONTH_KEY + ">"
             + "\\d{1,2})\\s(?<" + MONTH_KEY + ">\\S{3,})\\s(?<" + YEAR_KEY + ">\\d{4})";
     private static final Pattern DATE_FORMAT = Pattern.compile(DATE_PATTERN);
 
@@ -252,6 +252,12 @@ public class Date implements IntervalPart<Date> {
         return new Date(day, monthOfYear, year);
     }
 
+    /**
+     * Compares {@code this} to the other date.
+     *
+     * @param otherDate The other date to be compared to
+     * @return An {@code int} representing the order between the two dates (follows Java conventions)
+     */
     public int compareTo(Date otherDate) {
         Year otherYear = otherDate.year;
         int compareYear = year.compareTo(otherYear);
@@ -272,6 +278,14 @@ public class Date implements IntervalPart<Date> {
     }
 
     @Override
+    public int compareTo(IntervalPart o) {
+        if (!(o instanceof Date)) {
+            assert false : "Unable to compare different types of interval part";
+        }
+        return compareTo((Date) o);
+    }
+
+    @Override
     public Date copy() {
         Day copiedDay = day.copy();
         Year copiedYear = year.copy();
@@ -281,14 +295,6 @@ public class Date implements IntervalPart<Date> {
     @Override
     public String toString() {
         return String.format("%s %s %s", day, month, year);
-    }
-
-    @Override
-    public int compareTo(IntervalPart o) {
-        if (!(o instanceof Date)) {
-            assert false : "Unable to compare different types of interval part";
-        }
-        return compareTo((Date) o);
     }
 
     @Override

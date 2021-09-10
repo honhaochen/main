@@ -3,12 +3,12 @@ package seedu.address.calendar.model.date;
 import static java.util.Objects.requireNonNull;
 import static seedu.address.commons.util.AppUtil.checkArgument;
 
-import seedu.address.calendar.model.util.DateUtil;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.IntStream;
+
+import seedu.address.calendar.model.util.DateUtil;
 
 /**
  * Creates a day object which contains information about the day of month and day of week.
@@ -88,6 +88,15 @@ public class Day implements Comparable<Day> {
     }
 
     /**
+     * Gets the day of week of {@code this}.
+     *
+     * @return The day of week of {@code this}
+     */
+    public DayOfWeek getDayOfWeek() {
+        return dayOfWeek;
+    }
+
+    /**
      * Get the first {@code DayOfWeek} instance of the specified day when the numerical representation of the first
      * day of week in the specified month is known.
      *
@@ -159,15 +168,6 @@ public class Day implements Comparable<Day> {
      */
     public int getDayOfMonth() {
         return dayOfMonth;
-    }
-
-    /**
-     * Gets the day of week of {@code this}.
-     *
-     * @return The day of week of {@code this}
-     */
-    public DayOfWeek getDayOfWeek() {
-        return dayOfWeek;
     }
 
     /**

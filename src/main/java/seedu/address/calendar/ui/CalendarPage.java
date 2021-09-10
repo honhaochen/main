@@ -18,11 +18,8 @@ import seedu.address.commons.core.LogsCenter;
 import seedu.address.logic.commands.CommandResult;
 import seedu.address.logic.commands.exceptions.CommandException;
 import seedu.address.logic.parser.exceptions.ParseException;
-import seedu.address.ui.CommandBox;
-import seedu.address.logic.commands.CommandResult;
-import seedu.address.logic.commands.exceptions.CommandException;
-import seedu.address.logic.parser.exceptions.ParseException;
 import seedu.address.ui.CodeWindow;
+import seedu.address.ui.CommandBox;
 import seedu.address.ui.HelpWindow;
 import seedu.address.ui.Page;
 import seedu.address.ui.PageManager;
@@ -49,17 +46,17 @@ public class CalendarPage extends UiPart<Region> implements Page {
     private HelpWindow helpWindow;
 
     @FXML
-    StackPane commandBoxPlaceholder;
+    private StackPane commandBoxPlaceholder;
     @FXML
-    StackPane monthHeaderPlaceholder;
+    private StackPane monthHeaderPlaceholder;
     @FXML
-    StackPane yearHeaderPlaceholder;
+    private StackPane yearHeaderPlaceholder;
     @FXML
-    StackPane monthViewPlaceholder;
+    private StackPane monthViewPlaceholder;
     @FXML
-    VBox resultDisplayPlaceholder;
+    private VBox resultDisplayPlaceholder;
     @FXML
-    GridPane weekHeader;
+    private GridPane weekHeader;
 
     /**
      * Creates a calendar page.
@@ -107,6 +104,11 @@ public class CalendarPage extends UiPart<Region> implements Page {
         commandBoxPlaceholder.getChildren().add(commandBox.getRoot());
     }
 
+    /**
+     * Updates the calendar page.
+     *
+     * @param updatedViewOnlyMonth The month view to be shown
+     */
     private void updateCalendarPage(ViewOnlyMonth updatedViewOnlyMonth) {
         Year year = updatedViewOnlyMonth.getYear();
         MonthOfYear monthOfYear = updatedViewOnlyMonth.getMonthOfYear();
@@ -131,6 +133,30 @@ public class CalendarPage extends UiPart<Region> implements Page {
     private void updateMonthView(ViewOnlyMonth viewOnlyMonth) {
         monthViewPlaceholder.getChildren().clear();
         monthViewPlaceholder.getChildren().add(MonthView.generateMonthGrid(viewOnlyMonth, monthViewWidth));
+    }
+
+    /**
+     * Opens the code window or focuses on it if it's already opened.
+     */
+    @FXML
+    public void handleCode() {
+        if (!codeWindow.isShowing()) {
+            codeWindow.show();
+        } else {
+            codeWindow.focus();
+        }
+    }
+
+    /**
+     * Opens the help window or focuses on it if it's already opened.
+     */
+    @FXML
+    public void handleHelp() {
+        if (!helpWindow.isShowing()) {
+            helpWindow.show();
+        } else {
+            helpWindow.focus();
+        }
     }
 
     @Override
@@ -180,6 +206,10 @@ public class CalendarPage extends UiPart<Region> implements Page {
             if (commandResult.isShowList()) {
                 handleShowList(commandResult.getFeedbackToUser());
                 resultDisplay.setFeedbackToUser("");
+            }
+
+            if (commandResult.isShowHelp()) {
+                handleHelp();
             }
 
             return commandResult;

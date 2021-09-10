@@ -2,15 +2,15 @@ package seedu.address.calendar.model.util;
 
 import static seedu.address.commons.util.AppUtil.checkArgument;
 
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+import java.util.List;
+
 import seedu.address.calendar.model.date.Date;
 import seedu.address.calendar.model.date.Day;
 import seedu.address.calendar.model.date.DayOfWeek;
 import seedu.address.calendar.model.date.MonthOfYear;
 import seedu.address.calendar.model.date.Year;
-
-import java.time.LocalDate;
-import java.time.temporal.ChronoUnit;
-import java.util.List;
 
 /**
  * Handles all date related manipulation. This acts as a facade class for {@code MonthOfYearUtil} and
@@ -52,6 +52,12 @@ public class DateUtil {
         return startDate.compareTo(endDate) <= 0;
     }
 
+    /**
+     * Converts date to {@code LocalDate}.
+     *
+     * @param date The date to be converted
+     * @return A {@code LocalDate} representation of the specified date
+     */
     private static LocalDate toLocalDate(Date date) {
         int dayOfMonth = date.getDay().getDayOfMonth();
         int month = date.getMonth().getNumericalVal();
@@ -189,7 +195,7 @@ public class DateUtil {
      * @return @code MonthOfYear} equivalent of {@code monthNum}
      */
     public static MonthOfYear convertNumToMonth(int zeroBasedMonth) {
-        return  MonthOfYearUtil.convertZeroBasedNumToMonth(zeroBasedMonth);
+        return MonthOfYearUtil.convertZeroBasedNumToMonth(zeroBasedMonth);
     }
 
     /* The following is used for more specific month-and-day-related purposes. */

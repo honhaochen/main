@@ -4,6 +4,7 @@ import static java.util.Objects.requireNonNull;
 import static seedu.address.itinerary.logic.parser.CliSyntax.PREFIX_DATE;
 import static seedu.address.itinerary.logic.parser.CliSyntax.PREFIX_DESCRIPTION;
 import static seedu.address.itinerary.logic.parser.CliSyntax.PREFIX_LOCATION;
+import static seedu.address.itinerary.logic.parser.CliSyntax.PREFIX_TAG;
 import static seedu.address.itinerary.logic.parser.CliSyntax.PREFIX_TIME;
 import static seedu.address.itinerary.logic.parser.CliSyntax.PREFIX_TITLE;
 
@@ -34,10 +35,12 @@ public class SearchCommand extends Command<Model> {
             + "[" + PREFIX_DATE + "DATE] "
             + "[" + PREFIX_TIME + "TIME] "
             + "[" + PREFIX_LOCATION + "LOCATION] "
-            + "[" + PREFIX_DESCRIPTION + "DESCRIPTION]\n"
+            + "[" + PREFIX_DESCRIPTION + "DESCRIPTION]"
+            + "[" + PREFIX_TAG + "]\n"
             + "Example: " + COMMAND_WORD + " "
             + PREFIX_DATE + "15032015 "
-            + PREFIX_LOCATION + "Singapore";
+            + PREFIX_LOCATION + "Singapore\n"
+            + "Do remember if you indicate tag, choose the tag from the Priority dropdown bar";
     public static final String MESSAGE_SUCCESS = "Processing...\nDone!\n"
             + "Here are the events that matches the details. ( ͡° ͜ʖ ͡°)";
 

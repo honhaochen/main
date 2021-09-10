@@ -1,8 +1,8 @@
 package seedu.address.financialtracker.model.expense;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import java.text.ParseException;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
@@ -29,6 +29,8 @@ class DateTest {
         assertFalse(Date.isValidDate("27-10-2016")); // with dashes only
         assertFalse(Date.isValidDate("15159999")); // off-world
         assertFalse(Date.isValidDate("271016"));
+        assertFalse(Date.isValidDate("3002016"));
+        assertFalse(Date.isValidDate("3104016"));
 
         // valid dates
         assertTrue(Date.isValidDate("27102016"));

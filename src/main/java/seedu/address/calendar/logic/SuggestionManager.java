@@ -1,11 +1,14 @@
 package seedu.address.calendar.logic;
 
-import seedu.address.calendar.commands.AlternativeCommand;
+import java.util.Optional;
+
+import seedu.address.calendar.logic.commands.AlternativeCommand;
 import seedu.address.calendar.model.Calendar;
 import seedu.address.logic.commands.Command;
 
-import java.util.Optional;
-
+/**
+ * Manages suggested commands to be executed.
+ */
 public class SuggestionManager {
     private Optional<AlternativeCommand> suggestedCommand = Optional.empty();
 

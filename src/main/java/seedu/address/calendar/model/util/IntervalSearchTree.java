@@ -21,11 +21,24 @@ public class IntervalSearchTree<S extends IntervalPart<S>, T extends Interval<S,
 
     /* Methods that perform basic operations. */
 
+    /**
+     * Inserts an interval into the tree.
+     *
+     * @param interval The interval to be added
+     * @return The relevant node
+     */
     public Node insert(T interval) {
         root = insert(interval, root);
         return root;
     }
 
+    /**
+     * Inserts an interval into the tree.
+     *
+     * @param interval The interval to be added
+     * @param root The root to add the interval to
+     * @return The relevant node
+     */
     private Node insert(T interval, Node root) {
         if (root == null) {
             incrementInterval(interval);
@@ -50,6 +63,11 @@ public class IntervalSearchTree<S extends IntervalPart<S>, T extends Interval<S,
         return avlBalance(root);
     }
 
+    /**
+     * Increments the number of intervals with specified interval.
+     *
+     * @param interval The specified interval
+     */
     private void incrementInterval(Interval interval) {
         if (!intervalTracker.containsKey(interval)) {
             intervalTracker.put(interval, 1);
@@ -60,6 +78,12 @@ public class IntervalSearchTree<S extends IntervalPart<S>, T extends Interval<S,
         return;
     }
 
+    /**
+     * Removes an interval from the tree.
+     *
+     * @param interval The interval to be removed
+     * @throws NoSuchElementException If the interval cannot be removed
+     */
     public void remove(T interval) throws NoSuchElementException {
         if (!intervalTracker.containsKey(interval)) {
             throw new NoSuchElementException("Unable to remove a non-existent interval");
@@ -73,6 +97,13 @@ public class IntervalSearchTree<S extends IntervalPart<S>, T extends Interval<S,
         root = remove(interval, root);
     }
 
+    /**
+     * Removes an interval from the tree.
+     *
+     * @param interval The interval to be removed
+     * @param root The relevant root to remove the node from
+     * @throws NoSuchElementException If the interval cannot be removed
+     */
     private Node remove(T interval, Node root) {
         if (root == null) {
             return null;
@@ -107,6 +138,11 @@ public class IntervalSearchTree<S extends IntervalPart<S>, T extends Interval<S,
         return avlBalance(root);
     }
 
+    /**
+     * Reduces the number of intervals specified.
+     *
+     * @param interval The specified interval to be removed
+     */
     private void decrementInterval(Interval interval) {
         if (!intervalTracker.containsKey(interval)) {
             assert false : "Deleting of non-existent value is not allowed";
@@ -144,7 +180,7 @@ public class IntervalSearchTree<S extends IntervalPart<S>, T extends Interval<S,
             return getCollision(newInterval, rightSubtree);
         }
     }
-
+/*
     public void traverse(Node node) {
         if (node == null) {
             return;
@@ -165,8 +201,14 @@ public class IntervalSearchTree<S extends IntervalPart<S>, T extends Interval<S,
         System.out.println(" height: " + node.height);
         preOrder(node.leftNode);
         preOrder(node.rightNode);
-    }
+    }*/
 
+    /**
+     * Gets intervals that collide with that specified.
+     *
+     * @param newInterval The specified interval
+     * @return The colliding intervals
+     */
     public List<T> getCollisions(Interval<S, ?> newInterval) {
         List<T> collisions = new ArrayList<>();
         getCollisions(newInterval, root, collisions);
@@ -220,6 +262,13 @@ public class IntervalSearchTree<S extends IntervalPart<S>, T extends Interval<S,
         root.max = getMaxIntervalPart(root.interval.getEnd(), maxBetweenLeftAndRight);
     }
 
+    /**
+     * Gets the maximum interval part.
+     *
+     * @param currentEnd The current end interval part
+     * @param otherMax The other maximum interval part
+     * @return The relevant interval part
+     */
     private S getMaxIntervalPart(S currentEnd, S otherMax) {
         if (currentEnd.compareTo(otherMax) < 0) {
             return otherMax;
@@ -230,6 +279,13 @@ public class IntervalSearchTree<S extends IntervalPart<S>, T extends Interval<S,
 
     /* Helper functions that maintain balanced AVL tree. */
 
+    /**
+     * Computes the height of the current node.
+     *
+     * @param leftSubtree The relevant left subtree
+     * @param rightSubtree The relevant right subtree
+     * @return The required height
+     */
     private int computeHeight(Node leftSubtree, Node rightSubtree) {
         int rightSubtreeHeight = rightSubtree == null ? 0 : rightSubtree.height;
         int leftSubtreeHeight = leftSubtree == null ? 0 : leftSubtree.height;
@@ -237,6 +293,12 @@ public class IntervalSearchTree<S extends IntervalPart<S>, T extends Interval<S,
         return 1 + Math.max(rightSubtreeHeight, leftSubtreeHeight);
     }
 
+    /**
+     * Finds the minimum in the branch.
+     *
+     * @param node The required node to be deleted
+     * @return The relevant node to be removed.
+     */
     private Node findMin(Node node) {
         if (node.leftNode == null) {
             return node;
@@ -244,6 +306,12 @@ public class IntervalSearchTree<S extends IntervalPart<S>, T extends Interval<S,
         return findMin(node.leftNode);
     }
 
+    /**
+     * Delete the minimum from the relevant branch.
+     *
+     * @param node The node to be deleted
+     * @return The relevant node to be removed
+     */
     private Node deleteMin(Node node) {
         if (node == null) {
             return null;
@@ -262,6 +330,12 @@ public class IntervalSearchTree<S extends IntervalPart<S>, T extends Interval<S,
         return avlBalance(node);
     }
 
+    /**
+     * Balances the interval search tree.
+     *
+     * @param root The root of the tree
+     * @return The relevant node
+     */
     private Node avlBalance(Node root) {
         Node rightSubtree = root.rightNode;
         Node leftSubtree = root.leftNode;
@@ -281,6 +355,11 @@ public class IntervalSearchTree<S extends IntervalPart<S>, T extends Interval<S,
         return root;
     }
 
+    /**
+     * Balancing factor for the current node
+     * @param root The root of the current tree
+     * @return The factor
+     */
     private int balanceFactor(Node root) {
         Node rightSubtree = root.rightNode;
         Node leftSubtree = root.leftNode;
@@ -291,6 +370,12 @@ public class IntervalSearchTree<S extends IntervalPart<S>, T extends Interval<S,
         return leftSubtreeHeight - rightSubtreeHeight;
     }
 
+    /**
+     * Rotates the branch to the left.
+     *
+     * @param root The root of the current node
+     * @return The relevant node
+     */
     private Node rotateLeft(Node root) {
         Node rightSubtree = root.rightNode;
         root.rightNode = rightSubtree.leftNode;
@@ -307,6 +392,12 @@ public class IntervalSearchTree<S extends IntervalPart<S>, T extends Interval<S,
         return rightSubtree;
     }
 
+    /**
+     * Rotates the branch to the right.
+     *
+     * @param root The root of the current node
+     * @return The relevant node
+     */
     private Node rotateRight(Node root) {
         Node leftSubtree = root.leftNode;
         root.leftNode = leftSubtree.rightNode;
@@ -323,6 +414,9 @@ public class IntervalSearchTree<S extends IntervalPart<S>, T extends Interval<S,
         return leftSubtree;
     }
 
+    /**
+     * Represents a node of the tree.
+     */
     private class Node {
         private S max;
         private int height;
